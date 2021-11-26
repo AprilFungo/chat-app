@@ -16,10 +16,17 @@ io.on('connection',(socket)=>{
 console.log('New web socket connection')
 
 socket.emit('message','welcome!')
+socket.broadcast.emit('message','A new user has joined!')
+
 
 socket.on('sendMessage',(message)=>{
     io.emit('message',message)
 })
+
+socket.on('disconnect',()=>{
+    io.emit('message','A user has left!')
+})
+
 })
 
 server.listen(port,()=>{
