@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    overflow: hidden;
+    background-color: rgb(8, 85, 85);
+    z-index: 1;
+    
+}
+footer{
+ 
+}
