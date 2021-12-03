@@ -1,0 +1,51 @@
+const users = []
+
+const adduser = ({id, username,room})=>{
+    username = username.trim().toLowerCase()
+    room = room.trim().toLowerCase()
+
+    if (!username || !room){
+        return{
+           error: 'Username and room are required!'
+        }
+    }
+
+const existingUser = users.find((user)=>{
+  return user.room === room && user.username === username 
+})
+if (existingUser){
+    return{
+        error: 'Username is in use!'
+    }
+}
+const user = {id, username, room}
+users.push(user)
+return{user}
+}
+
+const removedUser = (id) =>{
+const index = users.findIndex((user) => user.id === id)
+
+if (index !== -1){
+return users.splice(index,1)[0]
+}
+}
+
+const getUser = (id) =>{
+    return users.find((user) => user.id === id)
+}
+
+adduser({
+    id:22,
+    username:'April',
+    room: 'billjoel'
+})
+
+adduser({
+    id:42,
+    username:'Allan',
+    room: 'Center City'
+})
+
+const user = getUser(421)
+console.log(user)
