@@ -29,14 +29,14 @@ outline:none
 button{
 cursor:pointer;
 padding:12px;
-background:#7C5CBF;
+background:#0f0e0f;
 border:none;
 color:#fff;
 font-size:16px;
 transition:background .3s ease
 }
 button:hover{
-background:#6b47b8
+background:#4a4555
 }
 button:disabled{
 cursor:default;
@@ -109,11 +109,12 @@ flex-grow:1;
 margin-right:16px
 }
 .compose input{
-border:1px solid #eee;
+border:1px solid rgb(19, 15, 15);
 width:100%;
 padding:12px;
 margin:0 16px 0 0;
-flex-grow:1}
+flex-grow:1
+}
 .compose button{
 font-size:14px
 }
